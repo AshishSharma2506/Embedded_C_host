@@ -1,0 +1,18 @@
+/*
+ * main.c
+ *
+ *  Created on: 01-Apr-2023
+ *      Author: HP
+ */
+
+#include <stdio.h>
+#include <stdint.h>
+
+int main(void)
+{
+	uint8_t data[10] = {0xFF,0xFF,0xFF};
+
+
+	getchar();
+	return 0;
+}

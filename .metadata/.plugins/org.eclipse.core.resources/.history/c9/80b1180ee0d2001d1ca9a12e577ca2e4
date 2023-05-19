@@ -1,0 +1,60 @@
+/*
+ * main.c
+ *
+ *  Created on: 04-Apr-2023
+ *      Author: HP
+ */
+
+// video 189
+// creating a using a structure array
+// Ref ECB 61(ii)
+
+#include <stdio.h>
+#include <stdint.h>
+
+
+
+// creating the student record structure
+typedef struct
+{
+	int32_t rollNumber;
+	char    name[50];
+	char    branch[20];
+	char    dob[10];
+	int8_t  semester;
+}STUDENT_INFO_t;
+
+void display_all_records(STUDENT_INFO_t *pBaseAddrRecords,uint8_t max_record);
+uint8_t max_record = 2;
+// creating a global array of our structure for 10 students
+// see how they are placed in memory .Ref ECB 61(ii)
+STUDENT_INFO_t students[2] =
+{
+		{1234,"ashok kumar","mechanical","12/02/1998",6},
+		{3456,"anda aadmi","chapadganju","12/00/bot",18}
+};
+
+
+void display_all_records(STUDENT_INFO_t *pBaseAddrRecords,uint8_t max_record)
+{
+	for(uint32_t i = 0;i<max_record; i++)
+	{
+		printf("Roll Number of element %d is :%d\n",i, pBaseAddrRecords[i].rollNumber);
+	}
+
+}
+void wait_for_user_input(void)
+{
+	printf("Press Enter to exit application.\n");
+	while(getchar() != '\n')
+	{
+	}
+	getchar();
+}
+int main(void)
+{
+
+	display_all_records(students,max_record);
+	wait_for_user_input();
+	return 0;
+}

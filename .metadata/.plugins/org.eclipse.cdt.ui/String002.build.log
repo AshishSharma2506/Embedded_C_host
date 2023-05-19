@@ -1,0 +1,8 @@
+18:36:19 **** Incremental Build of configuration Debug for project String002 ****
+Info: Internal Builder is used for build
+gcc -o String002.exe main.o 
+D:\STM32\CTOOLS\mingw32\bin/ld.exe: cannot open output file String002.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+
+18:36:20 Build Failed. 1 errors, 0 warnings. (took 470ms)
+

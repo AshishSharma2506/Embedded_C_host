@@ -1,0 +1,35 @@
+/*
+ * main.c
+ *
+ *  Created on: 04-Apr-2023
+ *      Author: HP
+ */
+
+
+// video 187
+// inputting a string
+#include <stdio.h>
+#include <stdint.h>
+void wait_for_user_input(void);
+int main(void)
+{
+	// create a vatiable to store the string
+	char name[30];// we can store max 29 char as one byte will be taken by the '\0'
+	// input the string
+	printf("Enter your name:");
+	scanf("%s",name);
+
+	printf("Hi,%s",name);
+	wait_for_user_input();
+
+
+	return 0;
+}
+void wait_for_user_input(void)
+{
+	printf("Press Enter to exit application.\n");
+	while(getchar() != '\n')
+	{
+	}
+	getchar();
+}

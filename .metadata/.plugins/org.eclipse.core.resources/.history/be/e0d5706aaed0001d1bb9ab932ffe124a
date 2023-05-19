@@ -1,0 +1,33 @@
+/*
+ * main.c
+ *
+ *  Created on: 01-Apr-2023
+ *      Author: HP
+ */
+
+#include <stdio.h>
+#include <stdint.h>
+
+int main(void)
+{
+	uint8_t data[10] = {0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF};
+
+	// printing the elements using a loop
+	for(uint32_t i = 0; i<10 ; i++)
+	{
+		printf("%x\t",data[i]);
+	}
+
+	// modify second data element
+	data[2] = 0x33;
+	printf("\n");
+
+	// printing the elements using a loop
+	for(uint32_t i = 0; i<10 ; i++)
+	{
+		printf("%x\t",data[i]);
+	}
+
+	getchar();
+	return 0;
+}

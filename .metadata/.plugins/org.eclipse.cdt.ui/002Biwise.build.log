@@ -1,0 +1,7 @@
+19:16:43 **** Rebuild of configuration Debug for project 002Biwise ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o 002Biwise.exe main.o 
+
+19:16:43 Build Finished. 0 errors, 0 warnings. (took 583ms)
+

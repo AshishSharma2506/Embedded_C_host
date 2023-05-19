@@ -1,0 +1,14 @@
+/*
+ * math.c
+ *
+ *  Created on: 04-Mar-2023
+ *      Author: HP
+ */
+
+// here we will write all the functions for our arithmetic operation
+
+// let us write the function prototyoes first
+int math_add(int n1, int n2);
+int math_add(int n1, int n2);
+int math_add(int n1, int n2);
+

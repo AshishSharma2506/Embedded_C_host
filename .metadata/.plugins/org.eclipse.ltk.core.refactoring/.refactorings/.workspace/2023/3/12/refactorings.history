@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Type_qalifier002&apos; to &apos;Type_qualifier002&apos;" description="Rename resource &apos;Type_qalifier002&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/Type_qalifier002" name="Type_qualifier002" stamp="1679386214854" updateReferences="true"/>
+</session>

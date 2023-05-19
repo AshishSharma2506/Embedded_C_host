@@ -1,0 +1,18 @@
+/*
+ * main.c
+ *
+ *  Created on: 01-Apr-2023
+ *      Author: HP
+ */
+
+#include <stdio.h>
+#include <stdint.h>
+
+int main(void)
+{
+	uint32_t numbers[100];
+	printf("Size of the array is %u\n",sizeof(numbers));
+	printf("Size of the array is %p\n",numbers);
+	getchar();
+	return 0;
+}

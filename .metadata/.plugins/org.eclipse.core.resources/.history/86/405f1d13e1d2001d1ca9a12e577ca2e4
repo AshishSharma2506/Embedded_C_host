@@ -1,0 +1,51 @@
+/*
+ * main.c
+ *
+ *  Created on: 04-Apr-2023
+ *      Author: HP
+ */
+
+// video 189
+// creating a using a structure array
+// Ref ECB 61(ii)
+
+#include <stdio.h>
+#include <stdint.h>
+
+
+
+// creating the student record structure
+typedef struct
+{
+	int32_t rollNumber;
+	char    name[50];
+	char    branch[20];
+	char    dob[10];
+	int8_t  semester;
+}STUDENT_INFO_t;
+
+
+uint8_t max_record = 10;// max record this application can store
+
+// creating a global array of our structure for 10 students
+// see how they are placed in memory .Ref ECB 61(ii)
+STUDENT_INFO_t students[max_record];
+
+
+// fucntion prototypes for this program
+void display_all_records(STUDENT_INFO_t *pBaseAddrRecords,uint8_t max_record);
+void wait_for_user_input(void);
+
+
+
+
+
+int main(void)
+{
+
+	display_all_records(students,max_record);
+	wait_for_user_input();
+	return 0;
+}
+
+

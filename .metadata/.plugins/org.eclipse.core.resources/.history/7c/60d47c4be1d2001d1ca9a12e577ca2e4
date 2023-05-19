@@ -1,0 +1,90 @@
+/*
+ * main.c
+ *
+ *  Created on: 04-Apr-2023
+ *      Author: HP
+ */
+
+// video 189
+// creating a using a structure array
+// Ref ECB 61(ii)
+
+#include <stdio.h>
+#include <stdint.h>
+
+
+
+// creating the student record structure
+typedef struct
+{
+	int32_t rollNumber;
+	char    name[50];
+	char    branch[20];
+	char    dob[10];
+	int8_t  semester;
+}STUDENT_INFO_t;
+
+
+uint8_t max_record = 10;// max record this application can store
+
+// creating a global array of our structure for 10 students
+// see how they are placed in memory .Ref ECB 61(ii)
+STUDENT_INFO_t students[max_record];
+
+
+// fucntion prototypes for this program
+void display_all_records(STUDENT_INFO_t *pBaseAddrRecords,uint8_t max_record);
+void wait_for_user_input(void);
+int display_menu(void);
+
+
+
+
+int main(void)
+{
+	int8_t menu_code;// code for the user to interact with the program and take action
+
+	printf("Student Record Menu Program.\n");// first print to describe the program
+
+	while(1)
+	{
+		// display the menu to the user
+		menu_code = display_menu();
+	}
+
+
+	display_all_records(students,max_record);
+	wait_for_user_input();
+	return 0;
+}
+
+
+
+int display_menu(void)
+{
+	printf("Display All records    ----> 1\n");
+	printf("Add a new record       ----> 2\n");
+	printf("Delete a record        ----> 3\n");
+	printf("Exit Application       ----> 4\n");
+	printf("Enter your option here :");
+	int8_t input;
+	scanf("%c",&input);
+	return input;
+}
+
+void display_all_records(STUDENT_INFO_t *pBaseAddrRecords,uint8_t max_record)
+{
+	for(uint32_t i = 0;i<max_record; i++)
+	{
+		printf("Roll Number of element %d is :%d\n",i, pBaseAddrRecords[i].rollNumber);
+	}
+
+}
+void wait_for_user_input(void)
+{
+	printf("Press Enter to exit application.\n");
+	while(getchar() != '\n')
+	{
+	}
+	getchar();
+}

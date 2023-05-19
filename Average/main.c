@@ -1,0 +1,39 @@
+/*
+ * main.c
+ *
+ *  Created on: 11-Mar-2023
+ *      Video no:72
+ */
+
+#include <stdio.h>
+int main(void)
+{
+
+	float number1,number2,number3;
+	float average;
+
+	printf("Enter the first number:");
+	fflush(stdout); // to flush the content of the output buffer to the standard output,here the console
+	// read the EBC 20 (ii) notes to understand the working
+	scanf("%f",&number1);
+
+
+	printf("Enter the second number:");
+	fflush(stdout);
+	scanf("%f",&number2);
+
+
+	printf("Enter the third number:");
+	fflush(stdout);
+	scanf("%f",&number3);
+
+	average = (number1 + number2 + number3)/3;
+	printf("\nAverge is %f\n",average);
+
+	printf("Press key to exit");
+	getchar(); // until user enters a char the program will hang there but will fetch the \n in
+	// the input buffer and return
+	getchar();// using another get char
+	//return 0;
+
+}

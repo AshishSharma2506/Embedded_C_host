@@ -1,0 +1,48 @@
+/*
+ * main.c
+ *
+ *  Created on: 01-Apr-2023
+ *      Author: HP
+ */
+
+#include <stdio.h>
+#include <stdint.h>
+void wait_for_user_input(void);
+
+int main(void)
+{
+	int32_t nItem1,nItem2;
+	printf("Array Swapping Program.\n");
+	printf("Enter Number of Elements of Array 1 & 2:");
+	scanf("%d %d",&nItem1,&nItem2);
+
+	if((nItem1<0) || (nItem2<0))
+	{
+		wait_for_user_input();
+		return 0;
+	}
+
+
+	// creating the arrays
+	int32_t array1[nItem1];
+	int32_t array2[nItem2];
+
+	// get the inputs for the data items
+	for(uint32_t i = 0 ;i<nItem1 ;i++)
+	{
+		printf("Enter the %d element of Array1",i);
+		scanf("%d",&array1[i]);
+	}
+
+
+	wait_for_user_input();
+	return 0;
+}
+void wait_for_user_input(void)
+{
+	while( getchar() != '\n')
+	{
+	     ;
+	}
+	getchar();
+}

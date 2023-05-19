@@ -1,0 +1,23 @@
+/*
+ * mian.c
+ *
+ *  Created on: 05-Apr-2023
+ *      Author: HP
+ */
+
+// Video 190
+#include <stdio.h>
+// using function like macro
+#define PI 3.1415f
+#define AREA_OF_CIRCLE(r) PI*r*r
+
+
+int main(void)
+{
+
+	float areaCircle;
+	areaCircle =  AREA_OF_CIRCLE(2);// using the macro for area
+	printf("Area = %f\n",areaCircle);
+
+	return 0;
+}

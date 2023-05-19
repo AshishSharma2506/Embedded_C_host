@@ -1,0 +1,20 @@
+/*
+ * main.c
+ *
+ *  Created on: 01-Apr-2023
+ *      Author: HP
+ */
+
+#include <stdio.h>
+#include <stdint.h>
+
+int main(void)
+{
+	uint8_t data[10] = {0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF};
+	// changing the value of second element(1st position in array)
+	*(data+1) = 0xEE;
+
+
+	getchar();
+	return 0;
+}

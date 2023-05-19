@@ -1,0 +1,56 @@
+/*
+ * main.c
+ *
+ *  Created on: 28-Mar-2023
+ *      Author: HP
+ */
+
+
+// video 161
+/* to understand the how to use the structure data pointer and passing it to a function*/
+
+#include <stdio.h>
+#include <stdint.h>
+
+void displayMemberElements(struct DataSet *pData);
+
+struct DataSet
+{
+	char data1;
+	int data2;
+	char data3;
+	short data4;
+};
+
+int main(void)
+{
+
+	// create a varaible of the structure type
+	struct DataSet data;
+
+	// initialize the member elements of DataSet using the coventionsal dot operator
+	data.data1   = 0x11;
+	data.data2   = 0xFFFFEEEE;
+	data.data3   = 0x22;
+	data.data4   = 0xABCD;
+
+	// calling the function which takes structure pointer
+	displayMemberElements(&data);
+
+	getchar();
+
+	return 0;
+}
+void displayMemberElements(struct DataSet *pData) // will take the structure pointer
+{
+	// let us do something in this function using the structure address it received
+	printf("data1 = %X\n",pData->data1); // remember to use the arrow operator and not the dot as
+	// it is a structure var of pointer type
+	printf("data2 = %X\n",pData->data2);
+	printf("data3 = %X\n",pData->data3);
+	printf("data4 = %X\n",pData->data4);
+
+	printf("Changing the member element 1\n");
+	pData->data1 = 0x55;
+	printf("data1 = %X\n",pData->data1);
+}

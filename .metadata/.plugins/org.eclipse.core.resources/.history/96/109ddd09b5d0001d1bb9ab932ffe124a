@@ -1,0 +1,73 @@
+/*
+ * main.c
+ *
+ *  Created on: 01-Apr-2023
+ *      Author: HP
+ */
+
+#include <stdio.h>
+#include <stdint.h>
+void wait_for_user_input(void);
+void array_display(int32_t *pArray, uint32_t len);
+
+int main(void)
+{
+	int32_t nItem1,nItem2;
+	printf("Array Swapping Program.\n");
+	printf("Enter Number of Elements of Array 1 & 2:");
+	scanf("%d %d",&nItem1,&nItem2);
+
+	if((nItem1<0) || (nItem2<0))
+	{
+		printf("Array size cannot be negative.\n");
+		wait_for_user_input();
+		return 0;
+	}
+
+
+	// creating the arrays
+	int32_t array1[nItem1];
+	int32_t array2[nItem2];
+
+	// get the inputs for the data items
+	for(uint32_t i = 0 ;i<nItem1 ;i++)
+	{
+		printf("Enter the %d element of Array1:",i);
+		scanf("%d",&array1[i]);
+	}
+
+	// for array 2
+	for(uint32_t i = 0 ;i<nItem2 ;i++)
+	{
+		printf("Enter the %d element of Array2:",i);
+		scanf("%d",&array2[i]);
+	}
+
+	// printing the contents of the array before swapping
+	array_display(array1,nItem1);
+	printf("\n");
+	array_display(array2,nItem2);
+	printf("\n");
+
+	wait_for_user_input();
+	return 0;
+}
+
+void array_display(int32_t *pArray, uint32_t len)
+{
+	for(uint32_t i = 0 ;i<len ;i++)
+	{
+		printf("%d",pArray[i]);
+	}
+}
+
+
+void wait_for_user_input(void)
+{
+	printf("Press Enter to Exit the application.\n");
+	while( getchar() != '\n')
+	{
+	     ;
+	}
+	getchar();
+}

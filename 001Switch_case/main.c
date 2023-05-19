@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <stdint.h>
 void wait_for_user_input(void);
-
+void getfunc(void);//dummmy for repository update check
 int main(void)
 {
 	// variable declaration for the figure code
@@ -181,4 +181,9 @@ void wait_for_user_input(void)
 	{
 	}
 	getchar();
+}
+// cheking if this will be updated or not in the repository
+void getfunc(void)
+{
+	// dummy 
 }
